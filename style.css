@@ -1,0 +1,77 @@
+body {
+    font-family: ComicShannsMono Nerd Font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+#example {
+    font-size: 40px;
+}
+
+#board-container {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
+    gap: 2px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 2px solid #ccc;
+    font-size: 18px;    
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.cell-header {
+    background: #ddd;
+    font-weight: bold;
+}
+
+.sentence-cell {
+    cursor: pointer;;
+    background-color: white;
+    transition: background 0.3s;
+}
+
+.sentence-cell img {
+    width: 30px;
+}
+
+#scoreboard {
+    display: flex;;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+#team-a, #team-b {
+    padding: 10px;
+    /* background-color removed here */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.team {
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.active-team {
+    background-color: lightgreen;
+    transform: scale(1.05);
+}
